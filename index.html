@@ -240,7 +240,31 @@
   .certif-item { display: flex; align-items: center; gap: 12px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--azul); }
   .certif-item svg { flex-shrink: 0; }
 
+  /* CONTACT / QUOTE FORM SECTION */
+  .contact-section { background: linear-gradient(135deg, #0a1628 0%, var(--azul) 60%, #1a3a5c 100%); padding: 90px 0; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+  .contact-left .section-title, .contact-left-title { color: #fff !important; }
+  .contact-left .section-title span, .contact-left-title span { color: var(--dorado) !important; }
+  .contact-left-sub { font-size: 16px; color: rgba(255,255,255,.8); line-height: 1.65; margin-top: 16px; }
+  .contact-info-items { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
+  .contact-info-item { display: flex; align-items: center; gap: 16px; }
+  .contact-info-icon { width: 46px; height: 46px; border-radius: 12px; background: rgba(255,255,255,.1); flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
+  .contact-info-text strong { display: block; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--dorado); margin-bottom: 2px; }
+  .contact-info-text span { font-size: 14px; color: rgba(255,255,255,.8); }
+  .contact-form-wrap { background: #fff; border-radius: 20px; padding: 40px; box-shadow: 0 24px 70px rgba(0,0,0,.35); }
+  .form-title { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 20px; color: var(--azul); margin-bottom: 28px; padding-bottom: 18px; border-bottom: 2px solid var(--gris-claro); }
+  .form-group { margin-bottom: 18px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group label { display: block; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .8px; color: var(--azul); margin-bottom: 7px; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 15px; border: 2px solid #e9ecef; border-radius: 8px; font-family: 'Open Sans', sans-serif; font-size: 14px; color: #333; transition: border-color .2s, box-shadow .2s; background: #fff; appearance: none; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--rojo); box-shadow: 0 0 0 3px rgba(193,18,31,.1); }
+  .form-group textarea { min-height: 96px; resize: vertical; }
+  .btn-form-submit { width: 100%; background: var(--rojo); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; padding: 18px; border: none; border-radius: 8px; cursor: pointer; text-transform: uppercase; letter-spacing: .5px; display: flex; align-items: center; justify-content: center; gap: 10px; transition: background .2s, transform .2s; box-shadow: 0 4px 20px rgba(193,18,31,.35); margin-top: 6px; }
+  .btn-form-submit:hover { background: var(--burdeos); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(193,18,31,.4); }
+  .form-note { font-size: 12px; color: var(--gris); text-align: center; margin-top: 12px; line-height: 1.5; }
+
   @media (max-width: 960px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 40px; }
     .hero-inner { grid-template-columns: 1fr; }
     .hero-right { display: none; }
     .stats-inner { grid-template-columns: repeat(2, 1fr); }
@@ -285,15 +309,11 @@
     </span>
     <span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.1 2.2 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.45a2 2 0 012.11.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-      <a href="tel:+34681625566">+34 681 62 55 66</a>
+      <a href="tel:+34615645777">+34 615 645 777</a>
     </span>
     <span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
       <a href="mailto:comercial@redcatalunya.com">comercial@redcatalunya.com</a>
-    </span>
-    <span>
-      <span class="es">Lun–Vie: 8:00–19:00 · Sáb: 9:00–14:00</span>
-      <span class="ca">Dl–Dv: 8:00–19:00 · Ds: 9:00–14:00</span>
     </span>
   </div>
 </div>
@@ -380,7 +400,7 @@
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
           <span class="es">Pedir Presupuesto</span><span class="ca">Demanar Pressupost</span>
         </a>
-        <a href="https://wa.me/34681625566" class="btn-outline-white">
+        <a href="https://wa.me/34615645777" class="btn-outline-white">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
           WhatsApp
         </a>
@@ -809,23 +829,96 @@
   </div>
 </div>
 
-<!-- CTA -->
-<section class="cta-section" id="contacto">
-  <div class="cta-inner">
-    <h2><span class="es">¿Listo para Proteger<br>a tu Familia?</span><span class="ca">Preparat per Protegir<br>la teva Família?</span></h2>
-    <p>
-      <span class="es">Contáctanos hoy mismo y recibe un presupuesto gratuito y personalizado.<br>Instalación rápida, materiales premium y 2 años de garantía incluidos.</span>
-      <span class="ca">Contacta'ns avui mateix i rep un pressupost gratuït i personalitzat.<br>Instal·lació ràpida, materials premium i 2 anys de garantia inclosos.</span>
-    </p>
-    <div class="cta-buttons">
-      <a href="https://wa.me/34681625566?text=Hola!%20Me%20gustaría%20solicitar%20un%20presupuesto%20para%20la%20instalación%20de%20redes%20de%20protección." class="btn-white" target="_blank">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.118 1.533 5.852L0 24l6.332-1.518A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.876 0-3.64-.507-5.154-1.394l-.364-.219-3.762.903.956-3.66-.239-.377A9.932 9.932 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-        <span class="es">WhatsApp Ahora</span><span class="ca">WhatsApp Ara</span>
-      </a>
-      <a href="tel:+34681625566" class="btn-outline-white2">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.1 2.2 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.45a2 2 0 012.11.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-        +34 681 62 55 66
-      </a>
+<!-- CONTACTO / PRESSUPOST -->
+<section class="contact-section" id="contacto">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div class="contact-left">
+        <p class="section-label" style="color:var(--dorado)"><span class="es">Presupuesto Gratuito</span><span class="ca">Pressupost Gratuït</span></p>
+        <h2 class="section-title contact-left-title"><span class="es">Pide tu <span>Presupuesto</span><br>Sin Compromiso</span><span class="ca">Demana el teu <span>Pressupost</span><br>Sense Compromís</span></h2>
+        <p class="contact-left-sub">
+          <span class="es">Rellena el formulario y te respondemos en menos de 24 horas. Visita técnica gratuita incluida.</span>
+          <span class="ca">Omple el formulari i et responem en menys de 24 hores. Visita tècnica gratuïta inclosa.</span>
+        </p>
+        <div class="contact-info-items">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="var(--dorado)"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.118 1.533 5.852L0 24l6.332-1.518A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.876 0-3.64-.507-5.154-1.394l-.364-.219-3.762.903.956-3.66-.239-.377A9.932 9.932 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            </div>
+            <div class="contact-info-text">
+              <strong>WhatsApp</strong>
+              <span>+34 615 645 777</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--dorado)" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.1 2.2 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-.45a2 2 0 012.11.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="contact-info-text">
+              <strong><span class="es">Teléfono</span><span class="ca">Telèfon</span></strong>
+              <span>+34 615 645 777</span>
+            </div>
+          </div>
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--dorado)" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg>
+            </div>
+            <div class="contact-info-text">
+              <strong>Email</strong>
+              <span>comercial@redcatalunya.com</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <h3 class="form-title"><span class="es">Formulario de Presupuesto</span><span class="ca">Formulari de Pressupost</span></h3>
+        <div id="form-success" style="display:none;background:#d4edda;border:1px solid #b6d4be;border-radius:10px;padding:18px 20px;margin-bottom:20px;color:#155724;font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;line-height:1.5">
+          <span class="es">✓ ¡Solicitud enviada! Te contactaremos en menos de 24 horas.</span>
+          <span class="ca">✓ Sol·licitud enviada! Et contactarem en menys de 24 hores.</span>
+        </div>
+        <form id="quote-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label><span class="es">Nombre *</span><span class="ca">Nom *</span></label>
+              <input type="text" name="Nombre" placeholder="Joan García" required>
+            </div>
+            <div class="form-group">
+              <label><span class="es">Teléfono *</span><span class="ca">Telèfon *</span></label>
+              <input type="tel" name="Telefono" placeholder="+34 6XX XXX XXX" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" name="email" placeholder="ejemplo@email.com" required>
+          </div>
+          <div class="form-group">
+            <label><span class="es">Tipo de Servicio *</span><span class="ca">Tipus de Servei *</span></label>
+            <select name="Servicio" required>
+              <option value="" disabled selected><span class="es">Selecciona un servicio…</span></option>
+              <option>Balcones y Terrazas / Balcons i Terrasses</option>
+              <option>Ventanas y Pasillos / Finestres i Passadissos</option>
+              <option>Gatos y Mascotas / Gats i Mascotes</option>
+              <option>Seguridad Infantil / Seguretat Infantil</option>
+              <option>Anti-palomas / Anti-coloms</option>
+              <option>Áticos y Cubiertas / Àtics i Cobertes</option>
+              <option><span class="es">Otro</span><span class="ca">Altre</span></option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label><span class="es">Mensaje</span><span class="ca">Missatge</span></label>
+            <textarea name="Mensaje" placeholder="Medidas aproximadas, planta, características especiales…"></textarea>
+          </div>
+          <button type="submit" class="btn-form-submit" id="form-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span class="es">Enviar Solicitud</span><span class="ca">Enviar Sol·licitud</span>
+          </button>
+          <p class="form-note">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            <span class="es">Tus datos son confidenciales. Te respondemos en menos de 24 h.</span>
+            <span class="ca">Les teves dades són confidencials. Et responem en menys de 24 h.</span>
+          </p>
+        </form>
+      </div>
     </div>
   </div>
 </section>
@@ -851,7 +944,7 @@
         <a href="https://instagram.com/redcatalunya" class="social-btn" title="Instagram">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg>
         </a>
-        <a href="https://wa.me/34681625566" class="social-btn" title="WhatsApp">
+        <a href="https://wa.me/34615645777" class="social-btn" title="WhatsApp">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
         </a>
         <a href="https://facebook.com" class="social-btn" title="Facebook">
@@ -887,7 +980,7 @@
         <div class="contact-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C1121F" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.1 2.2 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81"/></svg>
         </div>
-        <p><strong><span class="es">Teléfono</span><span class="ca">Telèfon</span></strong>+34 681 62 55 66</p>
+        <p><strong><span class="es">Teléfono</span><span class="ca">Telèfon</span></strong>+34 615 645 777</p>
       </div>
       <div class="footer-contact-item">
         <div class="contact-icon">
@@ -901,16 +994,6 @@
         </div>
         <p><strong><span class="es">Zona de Cobertura</span><span class="ca">Zona de Cobertura</span></strong>Barcelona · Catalunya</p>
       </div>
-      <div class="footer-contact-item">
-        <div class="contact-icon">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C1121F" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        </div>
-        <p>
-          <strong><span class="es">Horario</span><span class="ca">Horari</span></strong>
-          <span class="es">Lun–Vie: 8:00–19:00<br>Sáb: 9:00–14:00</span>
-          <span class="ca">Dl–Dv: 8:00–19:00<br>Ds: 9:00–14:00</span>
-        </p>
-      </div>
     </div>
   </div>
   <div class="footer-bottom">
@@ -920,11 +1003,44 @@
 </footer>
 
 <!-- WHATSAPP FLOAT -->
-<a href="https://wa.me/34681625566?text=Hola%20👋%20¿Cómo%20podemos%20ayudarte?" class="whatsapp-float" target="_blank" title="WhatsApp">
+<a href="https://wa.me/34615645777?text=Hola%20👋%20¿Cómo%20podemos%20ayudarte?" class="whatsapp-float" target="_blank" title="WhatsApp">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.118 1.533 5.852L0 24l6.332-1.518A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.876 0-3.64-.507-5.154-1.394l-.364-.219-3.762.903.956-3.66-.239-.377A9.932 9.932 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
 </a>
 
 <script>
+document.getElementById('quote-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = this;
+  var btn = document.getElementById('form-btn');
+  btn.disabled = true;
+  btn.style.opacity = '.7';
+  fetch('https://formsubmit.co/ajax/comercial@redcatalunya.com', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      Nombre: form.querySelector('[name=Nombre]').value,
+      Telefono: form.querySelector('[name=Telefono]').value,
+      email: form.querySelector('[name=email]').value,
+      Servicio: form.querySelector('[name=Servicio]').value,
+      Mensaje: form.querySelector('[name=Mensaje]').value,
+      _subject: 'Nova sol·licitud de pressupost - RedCatalunya'
+    })
+  })
+  .then(function(r){ return r.json(); })
+  .then(function(data){
+    if (data.success === 'true' || data.success === true) {
+      document.getElementById('form-success').style.display = 'block';
+      form.reset();
+    }
+    btn.disabled = false;
+    btn.style.opacity = '1';
+  })
+  .catch(function(){
+    btn.disabled = false;
+    btn.style.opacity = '1';
+  });
+});
+
 function setLang(lang) {
   document.body.classList.toggle('ca-active', lang === 'ca');
   document.documentElement.lang = lang;
