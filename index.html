@@ -71,7 +71,7 @@
 
   .hero { position: relative; min-height: 680px; display: flex; align-items: center; overflow: hidden; }
   .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1628 0%, #1D3557 55%, #2a4a73 100%); }
-  .hero-bg::before { content: ''; position: absolute; inset: 0; background: url('https://source.unsplash.com/s9aIJrGQj9k/1600x900') center/cover; opacity: .22; }
+  .hero-bg::before { content: ''; position: absolute; inset: 0; background: url('https://picsum.photos/seed/rcbg/1600/900') center/cover; opacity: .22; }
   .hero-bg::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 180px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 180'%3E%3Cpath d='M0,180 L0,140 L30,140 L30,100 L60,100 L60,80 L90,80 L90,60 L120,60 L120,40 L150,40 L150,20 L180,20 L180,40 L210,40 L210,30 L240,30 L240,50 L260,50 L260,10 L280,0 L300,10 L320,50 L340,50 L340,30 L370,30 L370,40 L400,40 L400,20 L420,20 L420,40 L450,40 L450,60 L480,60 L480,80 L510,80 L510,60 L540,60 L540,40 L560,40 L560,20 L580,10 L600,0 L620,10 L640,20 L640,40 L660,40 L660,60 L690,60 L690,80 L720,80 L720,100 L750,100 L750,80 L780,80 L780,60 L800,60 L800,40 L820,40 L820,20 L840,10 L860,20 L880,40 L880,60 L910,60 L910,80 L940,80 L940,100 L970,100 L970,120 L1000,120 L1000,100 L1030,100 L1030,80 L1060,80 L1060,60 L1090,60 L1090,80 L1120,80 L1120,100 L1150,100 L1150,120 L1200,120 L1200,180 Z' fill='%23C1121F' opacity='0.18'/%3E%3C/svg%3E") bottom/cover no-repeat; }
   .hero-inner { max-width: 1200px; margin: 0 auto; padding: 80px 24px; position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 400px; gap: 60px; align-items: center; }
   .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(212,163,115,.15); border: 1px solid rgba(212,163,115,.4); color: var(--dorado); font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 7px 16px; border-radius: 100px; margin-bottom: 20px; width: fit-content; }
@@ -162,12 +162,12 @@
   .gallery-item.large img { height: 320px; }
 
   .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; position: relative; }
+  .process-steps-3 { grid-template-columns: repeat(3, 1fr); }
   .process-steps::before { content: ''; position: absolute; top: 32px; left: 10%; right: 10%; height: 2px; background: linear-gradient(to right, var(--rojo), var(--dorado), var(--rojo)); }
   .process-step { text-align: center; position: relative; }
   .step-num { width: 64px; height: 64px; border-radius: 50%; background: var(--azul); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 22px; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; position: relative; z-index: 1; box-shadow: 0 4px 20px rgba(29,53,87,.3); }
-  .process-step:nth-child(2) .step-num { background: var(--rojo); }
-  .process-step:nth-child(3) .step-num { background: var(--burdeos); }
-  .process-step:nth-child(4) .step-num { background: var(--dorado); color: var(--azul); }
+  .process-steps-3 .process-step:nth-child(2) .step-num { background: var(--rojo); }
+  .process-steps-3 .process-step:nth-child(3) .step-num { background: var(--dorado); color: var(--azul); }
   .process-step h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; color: var(--azul); margin-bottom: 10px; }
   .process-step p { font-size: 13.5px; color: var(--gris); line-height: 1.55; }
 
@@ -259,6 +259,9 @@
   .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 15px; border: 2px solid #e9ecef; border-radius: 8px; font-family: 'Open Sans', sans-serif; font-size: 14px; color: #333; transition: border-color .2s, box-shadow .2s; background: #fff; appearance: none; }
   .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--rojo); box-shadow: 0 0 0 3px rgba(193,18,31,.1); }
   .form-group textarea { min-height: 96px; resize: vertical; }
+  .file-input { padding: 10px 12px; cursor: pointer; font-size: 13px; color: var(--gris); }
+  .file-input::file-selector-button { background: var(--azul); color: #fff; border: none; padding: 6px 14px; border-radius: 5px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; cursor: pointer; margin-right: 10px; }
+  .file-hint { font-size: 11.5px; color: var(--gris); margin-top: 5px; line-height: 1.45; }
   .btn-form-submit { width: 100%; background: var(--rojo); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; padding: 18px; border: none; border-radius: 8px; cursor: pointer; text-transform: uppercase; letter-spacing: .5px; display: flex; align-items: center; justify-content: center; gap: 10px; transition: background .2s, transform .2s; box-shadow: 0 4px 20px rgba(193,18,31,.35); margin-top: 6px; }
   .btn-form-submit:hover { background: var(--burdeos); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(193,18,31,.4); }
   .form-note { font-size: 12px; color: var(--gris); text-align: center; margin-top: 12px; line-height: 1.5; }
@@ -273,7 +276,7 @@
     .why-visual { display: none; }
     .vantagens-grid { grid-template-columns: repeat(2, 1fr); }
     .testimonios-grid { grid-template-columns: 1fr; }
-    .process-steps { grid-template-columns: repeat(2, 1fr); }
+    .process-steps, .process-steps-3 { grid-template-columns: 1fr; }
     .process-steps::before { display: none; }
     .footer-main { grid-template-columns: 1fr 1fr; }
     nav { display: none; }
@@ -324,10 +327,23 @@
     <a href="#" class="logo">
       <div class="logo-icon">
         <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="18" stroke="#D4A373" stroke-width="2"/>
-          <path d="M8 20 L32 20 M20 8 L20 32 M10 10 L30 30 M30 10 L10 30" stroke="#F8F9FA" stroke-width="1.5" opacity=".6"/>
-          <rect x="10" y="14" width="20" height="12" rx="2" stroke="#F8F9FA" stroke-width="2"/>
-          <path d="M6 28 Q10 24 14 28 Q18 32 22 28 Q26 24 30 28 Q34 32 34 32" stroke="#D4A373" stroke-width="1.5" fill="none"/>
+          <circle cx="20" cy="20" r="18" fill="#1D3557" stroke="#D4A373" stroke-width="1.5"/>
+          <path d="M2 22 A18 18 0 0 0 38 22 Z" fill="#C1121F" opacity=".5"/>
+          <!-- balcony frame -->
+          <rect x="9" y="11" width="22" height="16" rx="1.5" stroke="#D4A373" stroke-width="1.5" fill="none"/>
+          <!-- net horizontal lines -->
+          <line x1="9" y1="15" x2="31" y2="15" stroke="rgba(248,249,250,.7)" stroke-width=".9"/>
+          <line x1="9" y1="19" x2="31" y2="19" stroke="rgba(248,249,250,.7)" stroke-width=".9"/>
+          <line x1="9" y1="23" x2="31" y2="23" stroke="rgba(248,249,250,.7)" stroke-width=".9"/>
+          <!-- net vertical lines -->
+          <line x1="14" y1="11" x2="14" y2="27" stroke="rgba(248,249,250,.7)" stroke-width=".9"/>
+          <line x1="19" y1="11" x2="19" y2="27" stroke="rgba(248,249,250,.7)" stroke-width=".9"/>
+          <line x1="24" y1="11" x2="24" y2="27" stroke="rgba(248,249,250,.7)" stroke-width=".9"/>
+          <!-- columns -->
+          <line x1="12" y1="27" x2="12" y2="33" stroke="#D4A373" stroke-width="1.5"/>
+          <line x1="20" y1="27" x2="20" y2="33" stroke="#D4A373" stroke-width="1.5"/>
+          <line x1="28" y1="27" x2="28" y2="33" stroke="#D4A373" stroke-width="1.5"/>
+          <line x1="8" y1="33" x2="32" y2="33" stroke="#D4A373" stroke-width="1.5"/>
         </svg>
       </div>
       <div class="logo-text">
@@ -486,7 +502,7 @@
     <div class="services-grid">
       <div class="service-card">
         <div class="service-img">
-          <img class="service-img-inner" src="https://source.unsplash.com/U9oiF9S7QbE/600x400" alt="Redes para Balcones Barcelona">
+          <img class="service-img-inner" src="https://picsum.photos/seed/rcbalcon/600/400" alt="Redes para Balcones Barcelona">
           <span class="service-badge"><span class="es">Popular</span><span class="ca">Popular</span></span>
           <div class="service-icon-overlay">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
@@ -500,7 +516,7 @@
       </div>
       <div class="service-card">
         <div class="service-img">
-          <img class="service-img-inner" src="https://source.unsplash.com/yyb5HOnHfus/600x400" alt="Redes para Ventanas Barcelona">
+          <img class="service-img-inner" src="https://picsum.photos/seed/rcfinestra/600/400" alt="Redes para Ventanas Barcelona">
           <div class="service-icon-overlay">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
           </div>
@@ -513,7 +529,7 @@
       </div>
       <div class="service-card">
         <div class="service-img">
-          <img class="service-img-inner" src="https://source.unsplash.com/KG1rrHGaSo8/600x400" alt="Redes para Gatos Barcelona">
+          <img class="service-img-inner" src="https://picsum.photos/seed/rcgat/600/400" alt="Redes para Gatos Barcelona">
           <span class="service-badge"><span class="es">Para Mascotas</span><span class="ca">Per a Mascotes</span></span>
           <div class="service-icon-overlay">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
@@ -527,7 +543,7 @@
       </div>
       <div class="service-card">
         <div class="service-img">
-          <img class="service-img-inner" src="https://source.unsplash.com/U3SjBD72Tl0/600x400" alt="Redes para Niños Barcelona">
+          <img class="service-img-inner" src="https://picsum.photos/seed/rckids/600/400" alt="Redes para Niños Barcelona">
           <span class="service-badge"><span class="es">Familia</span><span class="ca">Família</span></span>
           <div class="service-icon-overlay">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -541,7 +557,7 @@
       </div>
       <div class="service-card">
         <div class="service-img">
-          <img class="service-img-inner" src="https://source.unsplash.com/rJgYoEdVpQ8/600x400" alt="Anti-palomas Barcelona">
+          <img class="service-img-inner" src="https://picsum.photos/seed/rccoloms/600/400" alt="Anti-palomas Barcelona">
           <div class="service-icon-overlay">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
           </div>
@@ -554,7 +570,7 @@
       </div>
       <div class="service-card">
         <div class="service-img">
-          <img class="service-img-inner" src="https://source.unsplash.com/s3kdLmeYxXs/600x400" alt="Redes para Áticos Barcelona">
+          <img class="service-img-inner" src="https://picsum.photos/seed/rcatic/600/400" alt="Redes para Áticos Barcelona">
           <div class="service-icon-overlay">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
           </div>
@@ -575,7 +591,7 @@
     <div class="why-grid">
       <div>
         <p class="section-label" style="color:var(--dorado)"><span class="es">Por Qué Elegir RedCatalunya</span><span class="ca">Per Què Triar RedCatalunya</span></p>
-        <h2 class="section-title why-title"><span class="es">La Empresa Más <span>Confiable</span><br>de Barcelona</span><span class="ca">L'Empresa Més <span>de Confiança</span><br>de Barcelona</span></h2>
+        <h2 class="section-title why-title"><span class="es">Instalación en <span>24 Horas.</span><br>Presupuesto Gratuito<br>por WhatsApp.</span><span class="ca">Instal·lació en <span>24 Hores.</span><br>Pressupost Gratuït<br>per WhatsApp.</span></h2>
         <p class="section-sub why-sub">
           <span class="es">Combinamos experiencia, materiales de alta calidad y atención personalizada para ofrecer la mejor solución de protección para tu familia.</span>
           <span class="ca">Combinem experiència, materials d'alta qualitat i atenció personalitzada per oferir la millor solució de protecció per a la teva família.</span>
@@ -613,15 +629,15 @@
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
             </div>
             <div class="why-feature-text">
-              <h4><span class="es">Presupuesto Gratuito y sin Compromiso</span><span class="ca">Pressupost Gratuït i sense Compromís</span></h4>
-              <p><span class="es">Visita técnica gratuita para evaluación y presupuesto personalizado, sin ningún coste adicional.</span><span class="ca">Visita tècnica gratuïta per a avaluació i pressupost personalitzat, sense cap cost addicional.</span></p>
+              <h4><span class="es">Presupuesto Gratuito por WhatsApp</span><span class="ca">Pressupost Gratuït per WhatsApp</span></h4>
+              <p><span class="es">Presupuesto personalizado y sin compromiso directamente en tu WhatsApp. Te respondemos en menos de 24 horas.</span><span class="ca">Pressupost personalitzat i sense compromís directament al teu WhatsApp. Et responem en menys de 24 hores.</span></p>
             </div>
           </div>
         </div>
       </div>
       <div class="why-visual">
         <div class="why-img-main">
-          <img src="https://source.unsplash.com/ABpK6BPSdoA/800x600" alt="Instalación de redes Barcelona">
+          <img src="https://picsum.photos/seed/rcwhy/800/600" alt="Instalación de redes Barcelona">
         </div>
         <div class="why-certif">
           <strong>+2000</strong>
@@ -638,26 +654,21 @@
     <div class="section-header section-header-centered">
       <p class="section-label"><span class="es">Simple y Rápido</span><span class="ca">Simple i Ràpid</span></p>
       <h2 class="section-title"><span class="es">¿Cómo <span>Funciona?</span></span><span class="ca">Com <span>Funciona?</span></span></h2>
-      <p class="section-sub"><span class="es">En solo 4 pasos, tu hogar estará más seguro y protegido.</span><span class="ca">En només 4 passos, la teva llar estarà més segura i protegida.</span></p>
+      <p class="section-sub"><span class="es">En solo 3 pasos, tu hogar estará más seguro y protegido.</span><span class="ca">En només 3 passos, la teva llar estarà més segura i protegida.</span></p>
     </div>
-    <div class="process-steps">
+    <div class="process-steps process-steps-3">
       <div class="process-step">
         <div class="step-num">1</div>
         <h4><span class="es">Contáctanos</span><span class="ca">Contacta'ns</span></h4>
-        <p><span class="es">Escríbenos por WhatsApp, teléfono o formulario. Nuestro equipo responde en pocas horas.</span><span class="ca">Escriu-nos per WhatsApp, telèfon o formulari. El nostre equip respon en poques hores.</span></p>
+        <p><span class="es">Escríbenos por WhatsApp o rellena el formulario. Adjunta fotos y medidas para un presupuesto más exacto.</span><span class="ca">Escriu-nos per WhatsApp o omple el formulari. Adjunta fotos i mides per a un pressupost més exacte.</span></p>
       </div>
       <div class="process-step">
         <div class="step-num">2</div>
-        <h4><span class="es">Visita Técnica</span><span class="ca">Visita Tècnica</span></h4>
-        <p><span class="es">Un especialista va a tu hogar de forma gratuita para evaluar el espacio y presentarte las mejores opciones.</span><span class="ca">Un especialista va a casa teva de forma gratuïta per avaluar l'espai i presentar-te les millors opcions.</span></p>
+        <h4><span class="es">Presupuesto en 24h</span><span class="ca">Pressupost en 24h</span></h4>
+        <p><span class="es">Recibes tu presupuesto personalizado y gratuito directamente por WhatsApp o email, sin sorpresas ni compromisos.</span><span class="ca">Rep el teu pressupost personalitzat i gratuït directament per WhatsApp o email, sense sorpreses ni compromisos.</span></p>
       </div>
       <div class="process-step">
         <div class="step-num">3</div>
-        <h4><span class="es">Presupuesto Personalizado</span><span class="ca">Pressupost Personalitzat</span></h4>
-        <p><span class="es">Recibe un presupuesto detallado y transparente, sin sorpresas. Tú decides sin presión.</span><span class="ca">Rep un pressupost detallat i transparent, sense sorpreses. Tu decideixes sense pressió.</span></p>
-      </div>
-      <div class="process-step">
-        <div class="step-num">4</div>
         <h4><span class="es">Instalación Profesional</span><span class="ca">Instal·lació Professional</span></h4>
         <p><span class="es">Nuestro equipo instala con cuidado y precisión. Hogar protegido en 24–48h. Garantía de 2 años incluida.</span><span class="ca">El nostre equip instal·la amb cura i precisió. Llar protegida en 24–48h. Garantia de 2 anys inclosa.</span></p>
       </div>
@@ -715,23 +726,23 @@
     </div>
     <div class="gallery-grid">
       <div class="gallery-item large">
-        <img src="https://source.unsplash.com/s9aIJrGQj9k/900x600" alt="Balcón con red Barcelona">
+        <img src="https://picsum.photos/seed/rcgal1/900/600" alt="Balcón con red Barcelona">
         <div class="overlay"><span class="overlay-text"><span class="es">Balcón – Eixample, Barcelona</span><span class="ca">Balcó – Eixample, Barcelona</span></span></div>
       </div>
       <div class="gallery-item">
-        <img src="https://source.unsplash.com/yyb5HOnHfus/600x400" alt="Ventana con red Barcelona">
+        <img src="https://picsum.photos/seed/rcfinestra/600/400" alt="Ventana con red Barcelona">
         <div class="overlay"><span class="overlay-text"><span class="es">Ventana – Gràcia, Barcelona</span><span class="ca">Finestra – Gràcia, Barcelona</span></span></div>
       </div>
       <div class="gallery-item">
-        <img src="https://source.unsplash.com/EodSLj89kKc/600x400" alt="Red para gatos Barcelona">
+        <img src="https://picsum.photos/seed/rcgal3/600/400" alt="Red para gatos Barcelona">
         <div class="overlay"><span class="overlay-text"><span class="es">Protección para Gatos</span><span class="ca">Protecció per a Gats</span></span></div>
       </div>
       <div class="gallery-item">
-        <img src="https://source.unsplash.com/X4wcsMoc73o/600x400" alt="Ático con red Barcelona">
+        <img src="https://picsum.photos/seed/rcgal4/600/400" alt="Ático con red Barcelona">
         <div class="overlay"><span class="overlay-text"><span class="es">Ático – Sarrià, Barcelona</span><span class="ca">Àtic – Sarrià, Barcelona</span></span></div>
       </div>
       <div class="gallery-item large">
-        <img src="https://source.unsplash.com/U9oiF9S7QbE/900x600" alt="Instalación profesional Barcelona">
+        <img src="https://picsum.photos/seed/rcgal5/900/600" alt="Instalación profesional Barcelona">
         <div class="overlay"><span class="overlay-text"><span class="es">Terraza – Sant Cugat, Barcelona</span><span class="ca">Terrassa – Sant Cugat, Barcelona</span></span></div>
       </div>
     </div>
@@ -837,8 +848,8 @@
         <p class="section-label" style="color:var(--dorado)"><span class="es">Presupuesto Gratuito</span><span class="ca">Pressupost Gratuït</span></p>
         <h2 class="section-title contact-left-title"><span class="es">Pide tu <span>Presupuesto</span><br>Sin Compromiso</span><span class="ca">Demana el teu <span>Pressupost</span><br>Sense Compromís</span></h2>
         <p class="contact-left-sub">
-          <span class="es">Rellena el formulario y te respondemos en menos de 24 horas. Visita técnica gratuita incluida.</span>
-          <span class="ca">Omple el formulari i et responem en menys de 24 hores. Visita tècnica gratuïta inclosa.</span>
+          <span class="es">Rellena el formulario y adjunta fotos para un presupuesto más exacto. Te respondemos en menos de 24 horas.</span>
+          <span class="ca">Omple el formulari i adjunta fotos per a un pressupost més exacte. Et responem en menys de 24 hores.</span>
         </p>
         <div class="contact-info-items">
           <div class="contact-info-item">
@@ -876,7 +887,11 @@
           <span class="es">✓ ¡Solicitud enviada! Te contactaremos en menos de 24 horas.</span>
           <span class="ca">✓ Sol·licitud enviada! Et contactarem en menys de 24 hores.</span>
         </div>
-        <form id="quote-form">
+        <form id="quote-form" action="https://formsubmit.co/comercial@redcatalunya.com" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="Nova sol·licitud de pressupost - RedCatalunya">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" id="next-url" value="">
           <div class="form-row">
             <div class="form-group">
               <label><span class="es">Nombre *</span><span class="ca">Nom *</span></label>
@@ -905,8 +920,16 @@
             </select>
           </div>
           <div class="form-group">
-            <label><span class="es">Mensaje</span><span class="ca">Missatge</span></label>
-            <textarea name="Mensaje" placeholder="Medidas aproximadas, planta, características especiales…"></textarea>
+            <label><span class="es">Medidas y descripción</span><span class="ca">Mides i descripció</span></label>
+            <textarea name="Mensaje" rows="4" placeholder="Ej: ventana 2,00 x 1,40 / varanda en L con 3,00 + 1,20 x 2,60 altura. Fotos en anexo."></textarea>
+          </div>
+          <div class="form-group">
+            <label>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg>
+              <span class="es">Adjuntar fotos (opcional)</span><span class="ca">Adjuntar fotos (opcional)</span>
+            </label>
+            <input type="file" name="Fotos" accept="image/*,application/pdf" multiple class="file-input">
+            <p class="file-hint"><span class="es">JPG, PNG o PDF · Máx. 5 archivos · Ayuda a presupuestar con precisión</span><span class="ca">JPG, PNG o PDF · Màx. 5 arxius · Ajuda a pressupostar amb precisió</span></p>
           </div>
           <button type="submit" class="btn-form-submit" id="form-btn">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
@@ -929,7 +952,7 @@
     <div>
       <div class="footer-logo">
         <div class="footer-logo-icon">
-          <svg width="26" height="26" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" stroke="#D4A373" stroke-width="1.5"/><path d="M8 20 L32 20 M20 8 L20 32" stroke="#F8F9FA" stroke-width="1.5"/><rect x="10" y="14" width="20" height="12" rx="2" stroke="#F8F9FA" stroke-width="1.5"/></svg>
+          <svg width="26" height="26" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#1D3557" stroke="#D4A373" stroke-width="1.5"/><path d="M2 22 A18 18 0 0 0 38 22 Z" fill="#C1121F" opacity=".5"/><rect x="9" y="11" width="22" height="16" rx="1.5" stroke="#D4A373" stroke-width="1.5"/><line x1="9" y1="15" x2="31" y2="15" stroke="rgba(248,249,250,.7)" stroke-width=".9"/><line x1="9" y1="19" x2="31" y2="19" stroke="rgba(248,249,250,.7)" stroke-width=".9"/><line x1="9" y1="23" x2="31" y2="23" stroke="rgba(248,249,250,.7)" stroke-width=".9"/><line x1="14" y1="11" x2="14" y2="27" stroke="rgba(248,249,250,.7)" stroke-width=".9"/><line x1="19" y1="11" x2="19" y2="27" stroke="rgba(248,249,250,.7)" stroke-width=".9"/><line x1="24" y1="11" x2="24" y2="27" stroke="rgba(248,249,250,.7)" stroke-width=".9"/><line x1="12" y1="27" x2="12" y2="33" stroke="#D4A373" stroke-width="1.5"/><line x1="20" y1="27" x2="20" y2="33" stroke="#D4A373" stroke-width="1.5"/><line x1="28" y1="27" x2="28" y2="33" stroke="#D4A373" stroke-width="1.5"/><line x1="8" y1="33" x2="32" y2="33" stroke="#D4A373" stroke-width="1.5"/></svg>
         </div>
         <div class="footer-logo-text">
           <strong><span>Red</span>Catalunya</strong>
@@ -1008,38 +1031,15 @@
 </a>
 
 <script>
-document.getElementById('quote-form').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var form = this;
-  var btn = document.getElementById('form-btn');
-  btn.disabled = true;
-  btn.style.opacity = '.7';
-  fetch('https://formsubmit.co/ajax/comercial@redcatalunya.com', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify({
-      Nombre: form.querySelector('[name=Nombre]').value,
-      Telefono: form.querySelector('[name=Telefono]').value,
-      email: form.querySelector('[name=email]').value,
-      Servicio: form.querySelector('[name=Servicio]').value,
-      Mensaje: form.querySelector('[name=Mensaje]').value,
-      _subject: 'Nova sol·licitud de pressupost - RedCatalunya'
-    })
-  })
-  .then(function(r){ return r.json(); })
-  .then(function(data){
-    if (data.success === 'true' || data.success === true) {
-      document.getElementById('form-success').style.display = 'block';
-      form.reset();
-    }
-    btn.disabled = false;
-    btn.style.opacity = '1';
-  })
-  .catch(function(){
-    btn.disabled = false;
-    btn.style.opacity = '1';
-  });
-});
+(function() {
+  var base = window.location.origin + window.location.pathname;
+  document.getElementById('next-url').value = base + '?enviado=1#contacto';
+  if (window.location.search.indexOf('enviado=1') !== -1) {
+    document.getElementById('form-success').style.display = 'block';
+    history.replaceState(null, '', window.location.pathname + '#contacto');
+    setTimeout(function(){ document.getElementById('contacto').scrollIntoView({behavior:'smooth'}); }, 150);
+  }
+})();
 
 function setLang(lang) {
   document.body.classList.toggle('ca-active', lang === 'ca');
