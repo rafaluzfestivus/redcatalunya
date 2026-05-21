@@ -44,13 +44,8 @@
 
   header { background: #fff; box-shadow: 0 2px 20px rgba(0,0,0,.09); position: sticky; top: 0; z-index: 100; }
   .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 76px; }
-  .logo { display: flex; align-items: center; gap: 14px; text-decoration: none; }
-  .logo-icon { width: 52px; height: 52px; background: var(--azul); border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden; flex-shrink: 0; border: 3px solid var(--rojo); }
-  .logo-icon svg { width: 32px; height: 32px; }
-  .logo-text { line-height: 1.1; }
-  .logo-text strong { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 22px; color: var(--azul); display: block; }
-  .logo-text strong span { color: var(--rojo); }
-  .logo-text small { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 3px; color: var(--dorado); text-transform: uppercase; font-weight: 600; }
+  .logo { display: flex; align-items: center; text-decoration: none; }
+  .logo-img { height: 52px; width: auto; display: block; }
 
   nav { display: flex; align-items: center; gap: 4px; }
   nav a { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: var(--azul); text-decoration: none; padding: 8px 14px; border-radius: 4px; letter-spacing: .4px; text-transform: uppercase; transition: all .2s; position: relative; }
@@ -71,7 +66,7 @@
 
   .hero { position: relative; min-height: 680px; display: flex; align-items: center; overflow: hidden; }
   .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1628 0%, #1D3557 55%, #2a4a73 100%); }
-  .hero-bg::before { content: ''; position: absolute; inset: 0; background: url('https://picsum.photos/seed/rcbg/1600/900') center/cover; opacity: .22; }
+  .hero-bg::before { content: ''; position: absolute; inset: 0; background: url('https://source.unsplash.com/s9aIJrGQj9k/1600x900') center/cover; opacity: .22; }
   .hero-bg::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 180px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 180'%3E%3Cpath d='M0,180 L0,140 L30,140 L30,100 L60,100 L60,80 L90,80 L90,60 L120,60 L120,40 L150,40 L150,20 L180,20 L180,40 L210,40 L210,30 L240,30 L240,50 L260,50 L260,10 L280,0 L300,10 L320,50 L340,50 L340,30 L370,30 L370,40 L400,40 L400,20 L420,20 L420,40 L450,40 L450,60 L480,60 L480,80 L510,80 L510,60 L540,60 L540,40 L560,40 L560,20 L580,10 L600,0 L620,10 L640,20 L640,40 L660,40 L660,60 L690,60 L690,80 L720,80 L720,100 L750,100 L750,80 L780,80 L780,60 L800,60 L800,40 L820,40 L820,20 L840,10 L860,20 L880,40 L880,60 L910,60 L910,80 L940,80 L940,100 L970,100 L970,120 L1000,120 L1000,100 L1030,100 L1030,80 L1060,80 L1060,60 L1090,60 L1090,80 L1120,80 L1120,100 L1150,100 L1150,120 L1200,120 L1200,180 Z' fill='%23C1121F' opacity='0.18'/%3E%3C/svg%3E") bottom/cover no-repeat; }
   .hero-inner { max-width: 1200px; margin: 0 auto; padding: 80px 24px; position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 400px; gap: 60px; align-items: center; }
   .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(212,163,115,.15); border: 1px solid rgba(212,163,115,.4); color: var(--dorado); font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 7px 16px; border-radius: 100px; margin-bottom: 20px; width: fit-content; }
@@ -210,11 +205,8 @@
 
   footer { background: #0d1f35; color: rgba(255,255,255,.75); }
   .footer-main { max-width: 1200px; margin: 0 auto; padding: 70px 24px 50px; display: grid; grid-template-columns: 2fr 1fr 1fr 1.3fr; gap: 50px; }
-  .footer-logo { margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
-  .footer-logo-icon { width: 48px; height: 48px; border-radius: 50%; background: var(--rojo); display: flex; align-items: center; justify-content: center; }
-  .footer-logo-text strong { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 20px; color: #fff; display: block; }
-  .footer-logo-text strong span { color: var(--rojo); }
-  .footer-logo-text small { font-family: 'Montserrat', sans-serif; font-size: 9px; letter-spacing: 3px; color: var(--dorado); text-transform: uppercase; }
+  .footer-logo { margin-bottom: 20px; }
+  .footer-logo-img { height: 44px; width: auto; display: block; filter: brightness(0) invert(1); }
   .footer-desc { font-size: 14px; line-height: 1.65; margin-bottom: 24px; color: rgba(255,255,255,.6); }
   .footer-social { display: flex; gap: 12px; }
   .social-btn { width: 38px; height: 38px; border-radius: 8px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.6); text-decoration: none; transition: all .2s; }
@@ -325,31 +317,7 @@
 <header>
   <div class="header-inner">
     <a href="#" class="logo">
-      <div class="logo-icon">
-        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="20" cy="20" r="18" fill="#1D3557" stroke="#D4A373" stroke-width="1.5"/>
-          <path d="M2 22 A18 18 0 0 0 38 22 Z" fill="#C1121F" opacity=".5"/>
-          <!-- balcony frame -->
-          <rect x="9" y="11" width="22" height="16" rx="1.5" stroke="#D4A373" stroke-width="1.5" fill="none"/>
-          <!-- net horizontal lines -->
-          <line x1="9" y1="15" x2="31" y2="15" stroke="rgba(248,249,250,.7)" stroke-width=".9"/>
-          <line x1="9" y1="19" x2="31" y2="19" stroke="rgba(248,249,250,.7)" stroke-width=".9"/>
-          <line x1="9" y1="23" x2="31" y2="23" stroke="rgba(248,249,250,.7)" stroke-width=".9"/>
-          <!-- net vertical lines -->
-          <line x1="14" y1="11" x2="14" y2="27" stroke="rgba(248,249,250,.7)" stroke-width=".9"/>
-          <line x1="19" y1="11" x2="19" y2="27" stroke="rgba(248,249,250,.7)" stroke-width=".9"/>
-          <line x1="24" y1="11" x2="24" y2="27" stroke="rgba(248,249,250,.7)" stroke-width=".9"/>
-          <!-- columns -->
-          <line x1="12" y1="27" x2="12" y2="33" stroke="#D4A373" stroke-width="1.5"/>
-          <line x1="20" y1="27" x2="20" y2="33" stroke="#D4A373" stroke-width="1.5"/>
-          <line x1="28" y1="27" x2="28" y2="33" stroke="#D4A373" stroke-width="1.5"/>
-          <line x1="8" y1="33" x2="32" y2="33" stroke="#D4A373" stroke-width="1.5"/>
-        </svg>
-      </div>
-      <div class="logo-text">
-        <strong><span>Red</span>Catalunya</strong>
-        <small>Xarxes de Protecció</small>
-      </div>
+      <img src="logo.svg" alt="RedCatalunya - Xarxes de Protecció" class="logo-img">
     </a>
     <nav>
       <a href="#inicio"><span class="es">Inicio</span><span class="ca">Inici</span></a>
@@ -502,7 +470,7 @@
     <div class="services-grid">
       <div class="service-card">
         <div class="service-img">
-          <img class="service-img-inner" src="https://picsum.photos/seed/rcbalcon/600/400" alt="Redes para Balcones Barcelona">
+          <img class="service-img-inner" src="https://source.unsplash.com/aum9YVavEmM/600x400" alt="Redes para Balcones Barcelona">
           <span class="service-badge"><span class="es">Popular</span><span class="ca">Popular</span></span>
           <div class="service-icon-overlay">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
@@ -516,7 +484,7 @@
       </div>
       <div class="service-card">
         <div class="service-img">
-          <img class="service-img-inner" src="https://picsum.photos/seed/rcfinestra/600/400" alt="Redes para Ventanas Barcelona">
+          <img class="service-img-inner" src="https://source.unsplash.com/8JTzSOviEno/600x400" alt="Redes para Ventanas Barcelona">
           <div class="service-icon-overlay">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="12" y1="3" x2="12" y2="21"/></svg>
           </div>
@@ -529,7 +497,7 @@
       </div>
       <div class="service-card">
         <div class="service-img">
-          <img class="service-img-inner" src="https://picsum.photos/seed/rcgat/600/400" alt="Redes para Gatos Barcelona">
+          <img class="service-img-inner" src="https://source.unsplash.com/7ZZq6r_j5X4/600x400" alt="Redes para Gatos Barcelona">
           <span class="service-badge"><span class="es">Para Mascotas</span><span class="ca">Per a Mascotes</span></span>
           <div class="service-icon-overlay">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
@@ -543,7 +511,7 @@
       </div>
       <div class="service-card">
         <div class="service-img">
-          <img class="service-img-inner" src="https://picsum.photos/seed/rckids/600/400" alt="Redes para Niños Barcelona">
+          <img class="service-img-inner" src="https://source.unsplash.com/W0z39EPR_ZM/600x400" alt="Redes para Niños Barcelona">
           <span class="service-badge"><span class="es">Familia</span><span class="ca">Família</span></span>
           <div class="service-icon-overlay">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -557,7 +525,7 @@
       </div>
       <div class="service-card">
         <div class="service-img">
-          <img class="service-img-inner" src="https://picsum.photos/seed/rccoloms/600/400" alt="Anti-palomas Barcelona">
+          <img class="service-img-inner" src="https://source.unsplash.com/couTAixLzNM/600x400" alt="Anti-palomas Barcelona">
           <div class="service-icon-overlay">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
           </div>
@@ -570,7 +538,7 @@
       </div>
       <div class="service-card">
         <div class="service-img">
-          <img class="service-img-inner" src="https://picsum.photos/seed/rcatic/600/400" alt="Redes para Áticos Barcelona">
+          <img class="service-img-inner" src="https://source.unsplash.com/NYpu6IyHR1Q/600x400" alt="Redes para Áticos Barcelona">
           <div class="service-icon-overlay">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
           </div>
@@ -637,7 +605,7 @@
       </div>
       <div class="why-visual">
         <div class="why-img-main">
-          <img src="https://picsum.photos/seed/rcwhy/800/600" alt="Instalación de redes Barcelona">
+          <img src="https://source.unsplash.com/ABpK6BPSdoA/800x600" alt="Instalación de redes Barcelona">
         </div>
         <div class="why-certif">
           <strong>+2000</strong>
@@ -726,23 +694,23 @@
     </div>
     <div class="gallery-grid">
       <div class="gallery-item large">
-        <img src="https://picsum.photos/seed/rcgal1/900/600" alt="Balcón con red Barcelona">
+        <img src="https://source.unsplash.com/8JTzSOviEno/900x600" alt="Balcón con red Barcelona">
         <div class="overlay"><span class="overlay-text"><span class="es">Balcón – Eixample, Barcelona</span><span class="ca">Balcó – Eixample, Barcelona</span></span></div>
       </div>
       <div class="gallery-item">
-        <img src="https://picsum.photos/seed/rcfinestra/600/400" alt="Ventana con red Barcelona">
+        <img src="https://source.unsplash.com/8JTzSOviEno/600x400" alt="Ventana con red Barcelona">
         <div class="overlay"><span class="overlay-text"><span class="es">Ventana – Gràcia, Barcelona</span><span class="ca">Finestra – Gràcia, Barcelona</span></span></div>
       </div>
       <div class="gallery-item">
-        <img src="https://picsum.photos/seed/rcgal3/600/400" alt="Red para gatos Barcelona">
+        <img src="https://source.unsplash.com/7ZZq6r_j5X4/600x400" alt="Red para gatos Barcelona">
         <div class="overlay"><span class="overlay-text"><span class="es">Protección para Gatos</span><span class="ca">Protecció per a Gats</span></span></div>
       </div>
       <div class="gallery-item">
-        <img src="https://picsum.photos/seed/rcgal4/600/400" alt="Ático con red Barcelona">
+        <img src="https://source.unsplash.com/aum9YVavEmM/600x400" alt="Ático con red Barcelona">
         <div class="overlay"><span class="overlay-text"><span class="es">Ático – Sarrià, Barcelona</span><span class="ca">Àtic – Sarrià, Barcelona</span></span></div>
       </div>
       <div class="gallery-item large">
-        <img src="https://picsum.photos/seed/rcgal5/900/600" alt="Instalación profesional Barcelona">
+        <img src="https://source.unsplash.com/mmfIFx8rk5w/900x600" alt="Instalación profesional Barcelona">
         <div class="overlay"><span class="overlay-text"><span class="es">Terraza – Sant Cugat, Barcelona</span><span class="ca">Terrassa – Sant Cugat, Barcelona</span></span></div>
       </div>
     </div>
@@ -951,13 +919,7 @@
   <div class="footer-main">
     <div>
       <div class="footer-logo">
-        <div class="footer-logo-icon">
-          <svg width="26" height="26" viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="18" fill="#1D3557" stroke="#D4A373" stroke-width="1.5"/><path d="M2 22 A18 18 0 0 0 38 22 Z" fill="#C1121F" opacity=".5"/><rect x="9" y="11" width="22" height="16" rx="1.5" stroke="#D4A373" stroke-width="1.5"/><line x1="9" y1="15" x2="31" y2="15" stroke="rgba(248,249,250,.7)" stroke-width=".9"/><line x1="9" y1="19" x2="31" y2="19" stroke="rgba(248,249,250,.7)" stroke-width=".9"/><line x1="9" y1="23" x2="31" y2="23" stroke="rgba(248,249,250,.7)" stroke-width=".9"/><line x1="14" y1="11" x2="14" y2="27" stroke="rgba(248,249,250,.7)" stroke-width=".9"/><line x1="19" y1="11" x2="19" y2="27" stroke="rgba(248,249,250,.7)" stroke-width=".9"/><line x1="24" y1="11" x2="24" y2="27" stroke="rgba(248,249,250,.7)" stroke-width=".9"/><line x1="12" y1="27" x2="12" y2="33" stroke="#D4A373" stroke-width="1.5"/><line x1="20" y1="27" x2="20" y2="33" stroke="#D4A373" stroke-width="1.5"/><line x1="28" y1="27" x2="28" y2="33" stroke="#D4A373" stroke-width="1.5"/><line x1="8" y1="33" x2="32" y2="33" stroke="#D4A373" stroke-width="1.5"/></svg>
-        </div>
-        <div class="footer-logo-text">
-          <strong><span>Red</span>Catalunya</strong>
-          <small>Xarxes de Protecció</small>
-        </div>
+        <img src="logo.svg" alt="RedCatalunya - Xarxes de Protecció" class="footer-logo-img">
       </div>
       <p class="footer-desc">
         <span class="es">Especialistas en redes de protección para balcones, ventanas, gatos y seguridad infantil en Barcelona y toda Cataluña. Calidad premium, instalación profesional.</span>

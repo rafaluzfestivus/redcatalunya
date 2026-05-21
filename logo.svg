@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 94" role="img" aria-label="RedCatalunya Xarxes de Protecció">
+  <defs>
+    <clipPath id="lc">
+      <circle cx="47" cy="47" r="43"/>
+    </clipPath>
+    <pattern id="ln" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45 0 0)">
+      <line x1="5" y1="0" x2="5" y2="10" stroke="rgba(255,255,255,0.48)" stroke-width="1.3"/>
+      <line x1="0" y1="5" x2="10" y2="5" stroke="rgba(255,255,255,0.48)" stroke-width="1.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Navy base circle -->
+  <circle cx="47" cy="47" r="43" fill="#1B2B6B"/>
+
+  <!-- Red outer ring arc — left semicircle (sweep=0 = CCW = goes through left) -->
+  <path d="M47 4 A43 43 0 0 0 47 90 L47 80 A33 33 0 0 1 47 14 Z" fill="#C41E3A"/>
+
+  <!-- Inner navy circle (creates clean ring appearance) -->
+  <circle cx="47" cy="47" r="33" fill="#1B2B6B"/>
+
+  <!-- Mesh/net pattern -->
+  <circle cx="47" cy="47" r="33" fill="url(#ln)"/>
+
+  <!-- Building arch silhouette at bottom -->
+  <g clip-path="url(#lc)">
+    <rect x="4" y="72" width="86" height="22" fill="rgba(255,255,255,0.17)"/>
+    <path d="M15 72 L15 65 Q21 58 27 65 L27 72 Z" fill="rgba(255,255,255,0.26)"/>
+    <path d="M34 72 L34 60 Q43 52 52 60 L52 72 Z" fill="rgba(255,255,255,0.30)"/>
+    <path d="M59 72 L59 65 Q65 58 71 65 L71 72 Z" fill="rgba(255,255,255,0.26)"/>
+  </g>
+
+  <!-- Outer red ring border -->
+  <circle cx="47" cy="47" r="43" fill="none" stroke="#C41E3A" stroke-width="2.5"/>
+
+  <!-- "RedCatalunya" text -->
+  <text y="57" font-family="Montserrat,'Arial Black',Arial,sans-serif" font-weight="900" font-size="42" letter-spacing="-0.5">
+    <tspan x="103" fill="#C41E3A">Red</tspan><tspan fill="#1B2B6B">Catalunya</tspan>
+  </text>
+
+  <!-- "XARXES DE PROTECCIÓ" subtitle -->
+  <text x="106" y="74" font-family="Montserrat,Arial,sans-serif" font-weight="700" font-size="10" letter-spacing="4.2" fill="#C9A86C">XARXES DE PROTECCIÓ</text>
+</svg>
