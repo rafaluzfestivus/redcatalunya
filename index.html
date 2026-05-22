@@ -255,8 +255,8 @@
   .file-input { padding: 10px 12px; cursor: pointer; font-size: 13px; color: var(--gris); }
   .file-input::file-selector-button { background: var(--azul); color: #fff; border: none; padding: 6px 14px; border-radius: 5px; font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700; cursor: pointer; margin-right: 10px; }
   .file-hint { font-size: 11.5px; color: var(--gris); margin-top: 5px; line-height: 1.45; }
-  .btn-form-submit { width: 100%; background: #25D366; color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; padding: 18px; border: none; border-radius: 8px; cursor: pointer; text-transform: uppercase; letter-spacing: .5px; display: flex; align-items: center; justify-content: center; gap: 10px; transition: background .2s, transform .2s; box-shadow: 0 4px 20px rgba(37,211,102,.4); margin-top: 6px; }
-  .btn-form-submit:hover { background: #1ebe5d; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,211,102,.45); }
+  .btn-form-submit { width: 100%; background: var(--rojo); color: #fff; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 15px; padding: 18px; border: none; border-radius: 8px; cursor: pointer; text-transform: uppercase; letter-spacing: .5px; display: flex; align-items: center; justify-content: center; gap: 10px; transition: background .2s, transform .2s; box-shadow: 0 4px 20px rgba(193,18,31,.35); margin-top: 6px; }
+  .btn-form-submit:hover { background: var(--burdeos); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(193,18,31,.4); }
   .form-note { font-size: 12px; color: var(--gris); text-align: center; margin-top: 12px; line-height: 1.5; }
 
   @media (max-width: 960px) {
@@ -856,20 +856,28 @@
           <span class="es">✓ ¡Solicitud enviada! Te contactaremos pronto por WhatsApp.</span>
           <span class="ca">✓ Sol·licitud enviada! Et contactarem en menys de 24 hores.</span>
         </div>
-        <form id="quote-form" onsubmit="sendToWhatsApp(event)">
+        <form id="quote-form" action="https://formsubmit.co/comercial@redcatalunya.com" method="POST" enctype="multipart/form-data">
+          <input type="hidden" name="_subject" value="Nova sol·licitud de pressupost - RedCatalunya">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" id="next-url" value="">
           <div class="form-row">
             <div class="form-group">
               <label><span class="es">Nombre *</span><span class="ca">Nom *</span></label>
-              <input type="text" id="f-nombre" placeholder="Joan García" required>
+              <input type="text" name="Nombre" placeholder="Joan García" required>
             </div>
             <div class="form-group">
               <label><span class="es">Teléfono *</span><span class="ca">Telèfon *</span></label>
-              <input type="tel" id="f-telefono" placeholder="+34 6XX XXX XXX" required>
+              <input type="tel" name="Telefono" placeholder="+34 6XX XXX XXX" required>
             </div>
           </div>
           <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="ejemplo@email.com">
+          </div>
+          <div class="form-group">
             <label><span class="es">Tipo de Servicio *</span><span class="ca">Tipus de Servei *</span></label>
-            <select id="f-servicio" required>
+            <select name="Servicio" required>
               <option value="" disabled selected></option>
               <option>Balcones y Terrazas / Balcons i Terrasses</option>
               <option>Ventanas y Pasillos / Finestres i Passadissos</option>
@@ -882,16 +890,24 @@
           </div>
           <div class="form-group">
             <label><span class="es">Medidas y descripción</span><span class="ca">Mides i descripció</span></label>
-            <textarea id="f-mensaje" rows="4" placeholder="Ej: ventana 2,00 x 1,40 / varanda en L con 3,00 + 1,20 x 2,60 altura."></textarea>
+            <textarea name="Mensaje" rows="4" placeholder="Ej: ventana 2,00 x 1,40 / varanda en L con 3,00 + 1,20 x 2,60 altura."></textarea>
+          </div>
+          <div class="form-group">
+            <label>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48"/></svg>
+              <span class="es">Adjuntar fotos (opcional)</span><span class="ca">Adjuntar fotos (opcional)</span>
+            </label>
+            <input type="file" name="Fotos" accept="image/*,application/pdf" multiple class="file-input">
+            <p class="file-hint"><span class="es">JPG, PNG o PDF · Máx. 5 archivos</span><span class="ca">JPG, PNG o PDF · Màx. 5 arxius</span></p>
           </div>
           <button type="submit" class="btn-form-submit" id="form-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12 0C5.373 0 0 5.373 0 12c0 2.122.555 4.118 1.533 5.852L0 24l6.332-1.518A11.94 11.94 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.876 0-3.64-.507-5.154-1.394l-.364-.219-3.762.903.956-3.66-.239-.377A9.932 9.932 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
-            <span class="es">Enviar por WhatsApp</span><span class="ca">Enviar per WhatsApp</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span class="es">Enviar Solicitud</span><span class="ca">Enviar Sol·licitud</span>
           </button>
           <p class="form-note">
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:4px"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-            <span class="es">Se abrirá WhatsApp con tu solicitud lista para enviar.</span>
-            <span class="ca">S'obrirà WhatsApp amb la teva sol·licitud llesta per enviar.</span>
+            <span class="es">Tus datos son confidenciales. Te respondemos lo antes posible.</span>
+            <span class="ca">Les teves dades són confidencials. Et responem lo antes possible.</span>
           </p>
         </form>
       </div>
@@ -978,26 +994,15 @@
 </a>
 
 <script>
-function sendToWhatsApp(e) {
-  e.preventDefault();
-  var nombre = document.getElementById('f-nombre').value.trim();
-  var telefono = document.getElementById('f-telefono').value.trim();
-  var servicio = document.getElementById('f-servicio').value;
-  var mensaje = document.getElementById('f-mensaje').value.trim();
-
-  var text = '👋 *Nova sol·licitud de pressupost - RedCatalunya*\n\n';
-  text += '👤 *Nom:* ' + nombre + '\n';
-  text += '📞 *Telèfon:* ' + telefono + '\n';
-  text += '🔧 *Servei:* ' + servicio + '\n';
-  if (mensaje) text += '📝 *Descripció:* ' + mensaje + '\n';
-
-  var url = 'https://wa.me/34615645777?text=' + encodeURIComponent(text);
-  window.open(url, '_blank');
-
-  document.getElementById('form-success').style.display = 'block';
-  document.getElementById('quote-form').reset();
-  document.getElementById('contacto').scrollIntoView({behavior: 'smooth'});
-}
+(function() {
+  var base = window.location.origin + window.location.pathname;
+  document.getElementById('next-url').value = base + '?enviado=1#contacto';
+  if (window.location.search.indexOf('enviado=1') !== -1) {
+    document.getElementById('form-success').style.display = 'block';
+    history.replaceState(null, '', window.location.pathname + '#contacto');
+    setTimeout(function(){ document.getElementById('contacto').scrollIntoView({behavior:'smooth'}); }, 150);
+  }
+})();
 
 function setLang(lang) {
   document.body.classList.toggle('ca-active', lang === 'ca');
