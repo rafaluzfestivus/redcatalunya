@@ -45,7 +45,8 @@
   header { background: #fff; box-shadow: 0 2px 20px rgba(0,0,0,.09); position: sticky; top: 0; z-index: 100; }
   .header-inner { max-width: 1200px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 76px; }
   .logo { display: flex; align-items: center; text-decoration: none; }
-  .logo-img { height: 52px; width: auto; display: block; }
+  .logo-img { height: 56px; width: auto; display: block; }
+  .footer-logo-img { height: 48px; width: auto; display: block; background: #fff; border-radius: 6px; padding: 4px 8px; }
 
   nav { display: flex; align-items: center; gap: 4px; }
   nav a { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 600; color: var(--azul); text-decoration: none; padding: 8px 14px; border-radius: 4px; letter-spacing: .4px; text-transform: uppercase; transition: all .2s; position: relative; }
@@ -206,7 +207,7 @@
   footer { background: #0d1f35; color: rgba(255,255,255,.75); }
   .footer-main { max-width: 1200px; margin: 0 auto; padding: 70px 24px 50px; display: grid; grid-template-columns: 2fr 1fr 1fr 1.3fr; gap: 50px; }
   .footer-logo { margin-bottom: 20px; }
-  .footer-logo-img { height: 44px; width: auto; display: block; filter: brightness(0) invert(1); }
+  /* footer-logo-img moved to header section above */
   .footer-desc { font-size: 14px; line-height: 1.65; margin-bottom: 24px; color: rgba(255,255,255,.6); }
   .footer-social { display: flex; gap: 12px; }
   .social-btn { width: 38px; height: 38px; border-radius: 8px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.1); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,.6); text-decoration: none; transition: all .2s; }
@@ -317,7 +318,7 @@
 <header>
   <div class="header-inner">
     <a href="#" class="logo">
-      <img src="logo.svg" alt="RedCatalunya - Xarxes de Protecció" class="logo-img">
+      <img src="logo.png" alt="RedCatalunya - Xarxes de Protecció" class="logo-img">
     </a>
     <nav>
       <a href="#inicio"><span class="es">Inicio</span><span class="ca">Inici</span></a>
@@ -919,7 +920,7 @@
   <div class="footer-main">
     <div>
       <div class="footer-logo">
-        <img src="logo.svg" alt="RedCatalunya - Xarxes de Protecció" class="footer-logo-img">
+        <img src="logo.png" alt="RedCatalunya - Xarxes de Protecció" class="footer-logo-img">
       </div>
       <p class="footer-desc">
         <span class="es">Especialistas en redes de protección para balcones, ventanas, gatos y seguridad infantil en Barcelona y toda Cataluña. Calidad premium, instalación profesional.</span>
